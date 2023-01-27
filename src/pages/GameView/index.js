@@ -170,7 +170,7 @@ const GameView = () => {
 									window.alert(t('Only the gamemaster can control the game.'))
 									return
 								}
-								update(room_ref, { step: 4 })
+								update(room_ref, { step: 5 })
 							}}
 						/>
 					)}
@@ -211,7 +211,7 @@ const GameView = () => {
 
 								update(room_ref, { step: 7 })
 							}}
-							url={t('game3VideoUrl')}
+							url="https://firebasestorage.googleapis.com/v0/b/exp-euro-parks-game.appspot.com/o/Filmpjes%20The%20Lost%20CEO%2Fgame3NewSound.mp3?alt=media&token=474204dc-526c-4725-8b22-99a2778f7d4f"
 						/>
 					)}
 					{step === 7 && (
@@ -234,7 +234,7 @@ const GameView = () => {
 								}
 								update(room_ref, { step: 9 })
 							}}
-							url="https://firebasestorage.googleapis.com/v0/b/exp-euro-parks-game.appspot.com/o/Filmpjes%20The%20Lost%20CEO%2Fgame3NewSound.mp3?alt=media&token=474204dc-526c-4725-8b22-99a2778f7d4f"
+							url="https://firebasestorage.googleapis.com/v0/b/exp-euro-parks-game.appspot.com/o/Filmpjes%20The%20Lost%20CEO%2Fgame4NewSound.mp3?alt=media&token=6ad2a6d5-cf18-4ae5-bccc-beac6d487964"
 						/>
 					)}
 					{step === 9 && (
@@ -257,7 +257,7 @@ const GameView = () => {
 								}
 								update(room_ref, { step: 11 })
 							}}
-							url="https://firebasestorage.googleapis.com/v0/b/exp-euro-parks-game.appspot.com/o/Filmpjes%20The%20Lost%20CEO%2Fgame4NewSound.mp3?alt=media&token=6ad2a6d5-cf18-4ae5-bccc-beac6d487964"
+							url={t('game5VideoUrl')}
 						/>
 					)}
 					{step === 11 && (
@@ -267,7 +267,14 @@ const GameView = () => {
 									window.alert(t('Only the gamemaster can control the game.'))
 									return
 								}
-								update(room_ref, { step: 12 })
+								// update(room_ref, { step: 12 })
+								update(room_ref, {
+									step: 15,
+									finished_time: Date.now(),
+									total_time_spent_score:
+										differenceInSeconds(Date.now(), room.start_time ?? 0) +
+										(room.hints_penalty ?? 0) * 60,
+								})
 							}}
 						/>
 					)}
