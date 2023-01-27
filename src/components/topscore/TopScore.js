@@ -26,6 +26,8 @@ const TopScore = ({ to, RoomContext }) => {
         position: 'relative',
       }}
     >
+      “Congrats! You solved all the mysteries and found our beloved CEO! We are so grateful. Thank you so much for all the hard work! Remember to take care of each other in hard times. And if you have been fast enough, there might be a reward waiting for you!
+      <br /><br />
       {t('You finished in')}{' '}
       <span style={{ color: 'green' }}>
         <span>
