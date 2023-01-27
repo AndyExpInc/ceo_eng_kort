@@ -27,10 +27,7 @@ const Game3 = ({ onNext }) => {
 		>
 			<DevButton onClick={onNext} />
 
-			<PreviousMediaDialog
-				ref={previous_media_dialog}
-				url="https://firebasestorage.googleapis.com/v0/b/de-kist.appspot.com/o/De%20Verdwenen%20CEO%2Fgame3NewSound.mp3?alt=media&token=77d9276f-bf27-4bcc-9076-8f5067ab4652"
-			/>
+			<PreviousMediaDialog ref={previous_media_dialog} url={t('game3VideoUrl')} />
 
 			<HintsDialog
 				ref={dialog_1}
