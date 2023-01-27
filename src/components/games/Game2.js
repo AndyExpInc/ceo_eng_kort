@@ -58,13 +58,13 @@ const Game2 = ({ onNext }) => {
 					},
 				]}
 			/>
-			<div style={{ textAlign: 'center' }}>{t('game2ClueText')}</div>
-			<BarcodeScanner codes={['1397', '24533']} onNext={onNext} />
 			{/* Walk from the intersection of the church and Tulpstraat towards the apothecary
 			(apotheek). Take the first left and then immediately right. Then take the second
 			right. Walk straight until the pub is on the left, turn right here. Turn left
 			into the second street. On this street is the building. */}
+			<div style={{ textAlign: 'center' }}>{t('game2ClueText')}</div>
 			Good job. We know the CEO's lucky number was 255, would that help us out?
+			<BarcodeScanner codes={['1397', '24533']} onNext={onNext} />
 			<div
 				style={{
 					flex: 1,
