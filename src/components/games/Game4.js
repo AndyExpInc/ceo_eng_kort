@@ -29,7 +29,7 @@ const Game4 = ({ onNext }) => {
 
       <PreviousMediaDialog
         ref={previous_media_dialog}
-        url={t('game4VideoUrl')}
+        url="https://firebasestorage.googleapis.com/v0/b/de-kist.appspot.com/o/De%20Verdwenen%20CEO%2Fgame4NewSound.mp3?alt=media&token=f7580f1f-5e85-44df-bbd7-d38c82927c90"
       />
 
       <HintsDialog
